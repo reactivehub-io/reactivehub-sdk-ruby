@@ -13,12 +13,12 @@ def async_post(url, payload)
 end
 
 module ReactivehubSDK
-  def build_client(client_key, client_secret, namespace)
-    ClientSDK.new(client_key, client_secret, namespace)
+  def build_client(team_name, client_key, client_secret)
+    ClientSDK.new(team_name, client_key, client_secret)
   end
 
-  def send_event(client, event_name, payload)
-    url = "https://#{client.namespace}.reactivehub.io/#{event_name}"
+  def publish_event(client, event_name, payload)
+    url = "https://#{client.team_name}.reactivehub.io/#{event_name}"
 
     EventMachine.run do
       Fiber.new{
