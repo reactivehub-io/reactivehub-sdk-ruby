@@ -12,11 +12,11 @@ Via Gemfile
 ```
 require 'reactivehub_sdk'
 
-client = build_client('<your-client-key>', '<your-client-secret>', 'your-team-name')
+client = build_client('your-team-name', '<your-client-key>', '<your-client-secret>')
 
 payload = '{ "name": "my-name" }'
 
-reactivehub.send_event(client, "my-event", payload)
+reactivehub.publish_event(client, "my-event", payload)
 ```
 
 ## How to contribute
