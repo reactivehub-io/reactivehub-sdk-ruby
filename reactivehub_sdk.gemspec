@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.authors = [
-    'Luiz Gustavo Caciatori'
+    'reactivehub.io'
   ]
   s.name = %q{reactivehub_sdk}
   s.version = '0.0.1'
